@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 
 @Entity
+@Table(name = "employee")
 public class Employee implements Serializable {
 
     @Id
@@ -26,6 +27,14 @@ public class Employee implements Serializable {
     }
     public Employee(Long id, String name, String email, String phone, String jobTitle, String imageUrl, String employeeCode) {
         this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.jobTitle = jobTitle;
+        this.imageUrl = imageUrl;
+        this.employeeCode = employeeCode;
+    }
+    public Employee(String name, String email, String phone, String jobTitle, String imageUrl, String employeeCode) {
         this.name = name;
         this.email = email;
         this.phone = phone;
